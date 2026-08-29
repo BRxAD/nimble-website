@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NiMBLE — Nudging in Microbiology Laboratory Evaluation</title>
+  <meta name="description" content="NiMBLE studies how the design of microbiology laboratory reports can improve antimicrobial prescribing without removing clinician autonomy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="index.html">
+        <img src="assets/nimble-logo.png" width="293" height="59" alt="NiMBLE">
+        <span class="logo-wordmark">
+          <strong>Research program</strong>
+          <span>Nudging in Microbiology Laboratory Evaluation</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#program">Program</a>
+        <a href="#nudges">Types of nudges</a>
+        <a href="#completed">Completed research</a>
+        <a href="#underway">Underway</a>
+        <a href="literature.html">Literature catalog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner solo">
+        <div>
+          <p class="kicker">Antimicrobial stewardship · Clinical microbiology</p>
+          <h1>The susceptibility report is a <em>choice</em>.</h1>
+          <p class="lede">NiMBLE Research Program studies how laboratories can change culture and susceptibility reports so that the easier antibiotic to pick is also the more appropriate one</p>
+          <div class="hero-actions">
+            <a class="btn btn-cyan" href="#nudges">See how nudging works</a>
+            <a class="btn btn-ghost" href="literature.html">Browse 45 nudges</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="program">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The research program</h2>
+        </div>
+        <div class="prose">
+          <p>Nudging in Microbiology Laboratory Evaluation (NiMBLE) is a collaborative program based in Ontario including clinicians and researchers from University of Toronto, McMaster University and several hospitals in the province. It asks a practical question: can the way a microbiology report is written change antibiotic decisions at the bedside? The microbiology laboratory is an important partner for antimicrobial stewardship programs. Many organizations encourage some form of selective or cascade reporting of susceptibility results. What they do not fully specify is which agents to show, in which clinical situations, and how to present them so that clinicians still have autonomy when a broader drug is needed.</p>
+          <p>A nudge, to change the way options are presented in order to alter behaviour without limiting autonomy. In the laboratory that can mean suppressing a fluoroquinolone on a pan-susceptible urine isolate, putting nitrofurantoin at the top of the list, or adding a sentence that the organism is more likely colonization than infection.</p>
+          <blockquote class="quote">
+            “A nudge… is any aspect of the choice architecture that alters people’s behavior in a predictable way without forbidding any options or significantly changing their economic incentives.”
+            <cite>Thaler RH, Sunstein CR. <em>Nudge</em>. Yale University Press; 2008.</cite>
+          </blockquote>
+          <p>NiMBLE maps those reporting choices, measures their effect on prescribing and clinical outcomes, and is now testing which formats work in which scenarios — and how clinicians actually read a nudged report. The program is supported by the AFP Innovation Fund, with collaborators across AMMI Canada’s Clinical Research Network and the Toronto Antimicrobial Resistance Research Network (TARRN).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nudges">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Four ways to show the same culture</h2>
+          <p class="section-intro">Following <a href="https://doi.org/10.1007/s15010-016-0938-3">Katchanov and colleagues</a>, NiMBLE treats the susceptibility report itself as the intervention. Switch formats to see how a midstream urine growing <em>E. coli</em> can be reported. This vignette is the one used in the program’s survey of prescribers.</p>
+        </div>
+        <div class="nudge-layout">
+          <div class="nudge-tabs" role="tablist" aria-label="Nudge types">
+            <button class="nudge-tab" id="tab-default" type="button" role="tab" aria-selected="true" aria-controls="slip" data-nudge="default">
+              <span class="swatch" aria-hidden="true"></span>
+              <span>
+                <h3>Default / baseline</h3>
+                <p>Every tested agent, in a conventional order. No preference is encoded.</p>
+              </span>
+            </button>
+            <button class="nudge-tab" id="tab-selective" type="button" role="tab" aria-selected="false" aria-controls="slip" data-nudge="selective">
+              <span class="swatch" aria-hidden="true"></span>
+              <span>
+                <h3>Selective / cascade</h3>
+                <p>Only preferred agents are shown. Broader drugs appear if the isolate is resistant to narrower ones, or on request.</p>
+              </span>
+            </button>
+            <button class="nudge-tab" id="tab-framing" type="button" role="tab" aria-selected="false" aria-controls="slip" data-nudge="framing">
+              <span class="swatch" aria-hidden="true"></span>
+              <span>
+                <h3>Framing / comments</h3>
+                <p>The full list remains, with a written comment that interprets the result or names preferred therapy.</p>
+              </span>
+            </button>
+            <button class="nudge-tab" id="tab-eye" type="button" role="tab" aria-selected="false" aria-controls="slip" data-nudge="eye">
+              <span class="swatch" aria-hidden="true"></span>
+              <span>
+                <h3>Eye-level</h3>
+                <p>Preferred agents stay on the report but move to the top of the list — first in the visual field.</p>
+              </span>
+            </button>
+          </div>
+          <div class="slip" id="slip" data-mode="default" role="tabpanel" aria-labelledby="tab-default">
+            <div class="slip-head">
+              <div class="slip-lab">
+                <strong>Culture and susceptibility</strong>
+              </div>
+              <div class="slip-meta">
+                Source: urine, midstream<br>
+                Organism: <em>Escherichia coli</em> 1×10<sup>8</sup> CFU/L
+              </div>
+            </div>
+            <div class="slip-body">
+              <p class="slip-comment" id="slip-comment">When treating patients with lower urinary tract infection, the use of nitrofurantoin or trimethoprim-sulfamethoxazole is preferred.</p>
+              <table class="ast">
+                <thead>
+                  <tr>
+                    <th scope="col">Antimicrobial</th>
+                    <th scope="col">Interp.</th>
+                  </tr>
+                </thead>
+                <tbody id="ast-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="completed">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Research completed</h2>
+          <p class="section-intro">Two evidence syntheses define the program. The 2019 scoping review asked what had been tried. The 2026 systematic review and meta-analysis asked whether it works, and whether it harms.</p>
+        </div>
+        <div class="study-grid">
+          <article class="study-card">
+            <p class="year">2019 · Scoping review</p>
+            <figure class="paper-figure">
+              <img src="assets/scoping-review.png" width="800" height="520" alt="First page of Langford et al., Nudging In MicroBiology Laboratory Evaluation (NIMBLE): A scoping review, Infection Control and Hospital Epidemiology, 2019.">
+            </figure>
+            <a class="btn btn-teal" href="https://doi.org/10.1017/ice.2019.293">Open the paper</a>
+          </article>
+          <article class="study-card">
+            <p class="year">2026 · Systematic review and meta-analysis</p>
+            <figure class="paper-figure">
+              <img src="assets/sr-visual-abstract.png" width="960" height="540" alt="Visual abstract for Langford et al., Nudging in MicroBiology Laboratory Evaluation (NiMBLE): a systematic review and meta-analysis, Clinical Microbiology and Infection, 2026.">
+            </figure>
+            <a class="btn btn-teal" href="https://doi.org/10.1016/j.cmi.2026.04.008">Open the paper</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="underway">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Research underway</h2>
+          <p class="section-intro">The syntheses show that reporting changes can work. They do not yet say which format is best in which clinical scenario, how clinicians experience a nudged report, or whether the effect holds in a prospective trial.</p>
+        </div>
+        <div class="pipeline">
+          <article>
+            <span class="status">Survey closed · analysis ongoing</span>
+            <h3>Vignette survey</h3>
+            <p>Prescribers are shown the same case, including initiation of therapy for <em>E. coli</em> in urine, with default, selective, framing, or eye-level reports. The working hypotheses: every nudge beats no nudge; more prescriptive formats (especially selective reporting) increase appropriateness more than eye-level or framing alone; and nudges will matter most when the task is to start or escalate therapy rather than merely rearrange an already-correct drug.</p>
+          </article>
+          <article>
+            <span class="status">Qualitative study</span>
+            <h3>Clinician perspectives</h3>
+            <p>Focus-group interviews ask how clinicians notice, interpret, and act on a microbiology nudge. The aim is not only to describe decision-making, but to use those accounts to design a reporting intervention that people will trust and use, including when a suppressed agent is the right one.</p>
+          </article>
+          <article>
+            <span class="status">Next · prospective evaluation</span>
+            <h3>Prospective trials</h3>
+            <p>Both NiMBLE reviews flag the same limit: most evidence is uncontrolled before-and-after work. Community and hospital prospective trials are being planned to test whether a designed nudge, informed by the vignette and qualitative findings, changes prescribing in real time, with patient outcomes and unintended consequences (including calls to the laboratory) as balancing measures.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The NiMBLE team</h2>
+        </div>
+        <ul class="team-list">
+          <li>Dr. Larissa M. Matukas</li>
+          <li>Dr. Bradley Langford</li>
+          <li>Dr. Elizabeth Leung</li>
+          <li>Dr. Kevin Brown</li>
+          <li>Dr. Reem Haj</li>
+          <li>Esther Jeong</li>
+          <li>Dr. Mark McIntyre</li>
+          <li>Dr. Aaron Scherer</li>
+          <li>Dr. Linda Taggart</li>
+          <li>Jenna Wong</li>
+          <li>Dr. Lee Goneau</li>
+          <li>Dr. Sean Ong</li>
+          <li>Dr. Nick Daneman</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>NiMBLE · Nudging in Microbiology Laboratory Evaluation. Supported by the AFP Innovation Fund, with AMMI CRN and TARRN.</p>
+    </div>
+  </footer>
+  <script src="app.js?v=5"></script>
+</body>
+</html>

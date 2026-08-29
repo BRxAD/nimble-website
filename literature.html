@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Literature catalog — NiMBLE</title>
+  <meta name="description" content="Filterable catalog of 45 interventional studies of microbiology report nudges included in Langford et al., Clin Microbiol Infect 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="index.html">
+        <img src="assets/nimble-logo.png" width="293" height="59" alt="NiMBLE">
+        <span class="logo-wordmark">
+          <strong>Research program</strong>
+          <span>Nudging in Microbiology Laboratory Evaluation</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#program">Program</a>
+        <a href="index.html#nudges">Types of nudges</a>
+        <a href="index.html#completed">Completed research</a>
+        <a href="index.html#underway">Underway</a>
+        <a href="literature.html" aria-current="page">Literature catalog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner solo">
+        <div>
+          <h1>Forty-five ways a report has been <em>nudged</em>.</h1>
+          <p class="lede">Every interventional study in the NiMBLE systematic review and meta-analysis. Filter by how the report was changed, where it was used, and what was cultured.</p>
+          <div class="hero-actions">
+            <a class="btn btn-cyan" href="https://doi.org/10.1016/j.cmi.2026.04.008">Read the review</a>
+            <a class="btn btn-ghost" href="index.html">Back to the program</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Filter the catalog</h2>
+          <p class="section-intro">Filters match the included-studies table in Langford et al., <em>Clin Microbiol Infect</em> 2026: type of nudge, setting, and where the nudge was applied. Each card’s description is the table’s nudge detail.</p>
+        </div>
+
+        <form class="filters" id="filters" aria-label="Filter studies">
+          <label class="field">Search
+            <input type="search" id="q" name="q" placeholder="Author, organism, or title" autocomplete="off">
+          </label>
+          <label class="field">Type of nudge
+            <select id="type" name="type">
+              <option value="">All types</option>
+              <option value="selective">Selective</option>
+              <option value="framing">Framing</option>
+              <option value="combination">Combination of selective and framing</option>
+            </select>
+          </label>
+          <label class="field">Setting
+            <select id="setting" name="setting">
+              <option value="">All settings</option>
+              <option value="inpatient">Inpatient</option>
+              <option value="outpatient">Outpatient</option>
+              <option value="mixed">Inpatient and outpatient</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label class="field">Where applied (specimen)
+            <select id="focus" name="focus">
+              <option value="">All specimens</option>
+              <option value="urine">Urine</option>
+              <option value="respiratory">Respiratory</option>
+              <option value="blood">Blood</option>
+              <option value="wound">Wound</option>
+              <option value="tissue">Tissue</option>
+              <option value="sterile">Sterile sites</option>
+              <option value="all">All</option>
+              <option value="other">Other</option>
+              <option value="not-stated">Not stated</option>
+            </select>
+          </label>
+        </form>
+
+        <div class="result-meta">
+          <p id="count" aria-live="polite">Loading studies…</p>
+          <p>Source: <a href="https://doi.org/10.1016/j.cmi.2026.04.008">doi:10.1016/j.cmi.2026.04.008</a></p>
+        </div>
+        <div class="study-list" id="results"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>NiMBLE literature catalog. Included studies from Langford et al., <em>Clin Microbiol Infect</em> 2026.</p>
+      <p><a href="index.html">Program home</a></p>
+    </div>
+  </footer>
+  <script src="studies.js?v=5"></script>
+  <script src="app.js?v=5"></script>
+</body>
+</html>

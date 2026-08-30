@@ -84,7 +84,16 @@
     function matches(study, state) {
       if (state.type && study.type !== state.type) return false;
       if (state.setting && study.setting !== state.setting) return false;
-      if (state.focus && !(study.specimens || []).includes(state.focus)) return false;
+      if (state.focus) {
+        const specs = study.specimens || [];
+        const hit =
+          state.focus === "sterile"
+            ? specs.some((s) => s === "sterile" || s === "blood")
+            : state.focus === "other"
+              ? specs.some((s) => s === "other" || s === "not-stated")
+              : specs.includes(state.focus);
+        if (!hit) return false;
+      }
       if (state.q) {
         const blob = [study.authors, study.title, study.journal, study.detail, study.country, study.applied, study.year]
           .join(" ")

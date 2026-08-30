@@ -20,6 +20,7 @@
   --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", "Cascadia Mono", ui-monospace, monospace;
   --space: clamp(1.25rem, 3vw, 2.5rem);
+  --header-clearance: calc(59px * 1.4 + 1.3rem + 1px + 0.85rem);
 }
 
 *,
@@ -30,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-clearance);
 }
 
 body {

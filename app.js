@@ -5,20 +5,25 @@
     <circle cx="24" cy="24" r="15.5" stroke="currentColor" stroke-width="2.25"/>
     <path d="M13.4 13.4 L34.6 34.6" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
   </symbol>
-  <symbol id="icon-selective" viewBox="0 0 48 48" fill="none">
-    <path d="M13 20.5V12a3.7 3.7 0 0 1 7.4 0v8.5" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
-    <path d="M24.8 22.3h13a3.4 3.4 0 1 1 0 6.8h-13" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
-    <path d="M8.5 22.3h16.3v11.4c0 3.3-2.5 5.8-6.1 5.8H14c-3.4 0-6.2-2.4-6.2-6.1v-5.4c0-3.3 2.4-5.7 6.2-5.7z" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round"/>
+  <symbol id="icon-hand-right" viewBox="0 0 48 48">
+    <g fill="currentColor">
+      <rect x="4.5" y="21" width="11" height="13" rx="6.5"/>
+      <path d="M10 16.5c0-1.2.4-2.2 1.2-3.1 1.1-1.2 2.7-1.9 4.5-1.9 1.3 0 2.5.4 3.4 1.1.6-1.6 2.1-2.7 3.9-2.7 1.5 0 2.8.8 3.5 2 .6-.7 1.5-1.2 2.6-1.2 2.1 0 3.7 1.7 3.7 3.8v7.3h12.6c2.4 0 4.3 1.9 4.3 4.3s-1.9 4.3-4.3 4.3H32.8c.2.6.3 1.3.3 2 0 3.8-3.1 6.9-6.9 6.9h-9.4C11.8 38.3 8 34.4 8 29.5v-4.2c0-1.8.7-3.4 1.9-4.6.1-.8.1-1.5.1-2.2z"/>
+      <rect x="26.5" y="20.6" width="18" height="8.6" rx="4.3"/>
+    </g>
+  </symbol>
+  <symbol id="icon-selective" viewBox="0 0 48 48">
+    <use href="#icon-hand-right"/>
   </symbol>
   <symbol id="icon-framing" viewBox="0 0 48 48" fill="none">
     <path d="M10 12.5h28c2.2 0 4 1.8 4 4v14c0 2.2-1.8 4-4 4H22l-8.5 7v-7H10c-2.2 0-4-1.8-4-4v-14c0-2.2 1.8-4 4-4z" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round"/>
     <path d="M16 20.5h16M16 26.5h10" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
   </symbol>
   <symbol id="icon-combination" viewBox="0 0 48 48" fill="none">
-    <rect x="7.5" y="24" width="33" height="16.5" rx="2.2" stroke="currentColor" stroke-width="2.25"/>
-    <path d="M17 24v-8.5a3.5 3.5 0 0 1 7 0V24" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
-    <path d="M24 24V12.5a3.5 3.5 0 0 1 7 0V24" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
-    <path d="M31 24v-6a3 3 0 0 1 6 0v6" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+    <path d="M8.5 11h31c2.2 0 4 1.8 4 4v16.5c0 2.2-1.8 4-4 4H22.5l-8 6.5v-6.5H8.5c-2.2 0-4-1.8-4-4V15c0-2.2 1.8-4 4-4z" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round"/>
+    <g transform="translate(11.2 13.4) scale(0.52)">
+      <use href="#icon-hand-right"/>
+    </g>
   </symbol>
   <symbol id="icon-eye" viewBox="0 0 48 48" fill="none">
     <path d="M6.5 24c4.2-9.2 11.2-14 17.5-14S37.3 14.8 41.5 24c-4.2 9.2-11.2 14-17.5 14S10.7 33.2 6.5 24z" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round"/>
@@ -36,10 +41,8 @@
     <path d="M14 18h8M14 24h12" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
   </symbol>
   <symbol id="icon-choice" viewBox="0 0 48 48" fill="none">
-    <circle cx="24" cy="11.5" r="5" stroke="currentColor" stroke-width="2.25"/>
-    <path d="M24 16.5v6.5M24 23l-10 14M24 23l10 14" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M10 37.5h8M30 37.5h8" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
-    <path d="M32.5 32.5l3 5 6-7" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 24h26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M24.5 13.5 L39.5 24 24.5 34.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
   <symbol id="icon-survey" viewBox="0 0 48 48" fill="none">
     <rect x="11" y="8" width="26" height="32" rx="2.2" stroke="currentColor" stroke-width="2.25"/>

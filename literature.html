@@ -8,23 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo-link" href="index.html">
-        <img src="assets/nimble-logo.png" width="293" height="59" alt="NiMBLE">
-        <span class="logo-wordmark">Nudging in Microbiology Laboratory Evaluation</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="header-bar">
+        <a class="logo-link" href="index.html#home">
+          <img src="assets/nimble-logo.png" width="293" height="59" alt="NiMBLE">
+          <span class="logo-wordmark">Nudging in Microbiology Laboratory Evaluation</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#home">Home</a>
         <a href="index.html#program">Program</a>
         <a href="index.html#nudges">Types of nudges</a>
         <a href="index.html#completed">Completed research</a>
+        <a href="index.html#media">Media</a>
         <a href="index.html#underway">Research underway</a>
         <a href="literature.html" aria-current="page">Nudge catalog</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -36,8 +41,8 @@
           <h1>Forty-five ways a report has been <em>nudged</em>.</h1>
           <p class="lede">Every interventional study in the NiMBLE systematic review and meta-analysis. Filter by how the report was changed, where it was used, and what was cultured.</p>
           <div class="hero-actions">
-            <a class="btn btn-cyan" href="https://doi.org/10.1016/j.cmi.2026.04.008">Read the review</a>
-            <a class="btn btn-ghost" href="index.html">Back to the program</a>
+            <a class="btn btn-cyan" href="https://www.clinicalmicrobiologyandinfection.org/article/S1198-743X(26)00192-8/fulltext" target="_blank" rel="noopener noreferrer">Read the review</a>
+            <a class="btn btn-ghost" href="index.html#home">Back to home</a>
           </div>
         </div>
       </div>
@@ -47,6 +52,22 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Filter the catalog</h2>
+        </div>
+
+        <div class="type-legend" id="type-legend" role="group" aria-label="Filter by type of nudge">
+          <button type="button" class="legend-btn is-active" data-type="" aria-pressed="true">All types</button>
+          <button type="button" class="legend-btn" data-type="selective" aria-pressed="false">
+            <span class="nudge-glyph glyph-selective" aria-hidden="true"><svg class="glyph"><use href="#icon-selective"></use></svg></span>
+            Selective
+          </button>
+          <button type="button" class="legend-btn" data-type="framing" aria-pressed="false">
+            <span class="nudge-glyph glyph-framing" aria-hidden="true"><svg class="glyph"><use href="#icon-framing"></use></svg></span>
+            Framing
+          </button>
+          <button type="button" class="legend-btn" data-type="combination" aria-pressed="false">
+            <span class="nudge-glyph glyph-combination" aria-hidden="true"><svg class="glyph"><use href="#icon-combination"></use></svg></span>
+            Combination
+          </button>
         </div>
 
         <form class="filters" id="filters" aria-label="Filter studies">
@@ -86,7 +107,7 @@
 
         <div class="result-meta">
           <p id="count" aria-live="polite">Loading studies…</p>
-          <p>Source: <a href="https://doi.org/10.1016/j.cmi.2026.04.008">doi:10.1016/j.cmi.2026.04.008</a></p>
+          <p>Source: <a href="https://www.clinicalmicrobiologyandinfection.org/article/S1198-743X(26)00192-8/fulltext" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cmi.2026.04.008</a></p>
         </div>
         <div class="study-list" id="results"></div>
       </div>
@@ -96,10 +117,10 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <p>NiMBLE literature catalog. Included studies from Langford et al., <em>Clin Microbiol Infect</em> 2026.</p>
-      <p><a href="index.html">Program home</a></p>
+      <p><a href="index.html#home">Home</a> · <a href="contact.html">Contact</a></p>
     </div>
   </footer>
   <script src="studies.js?v=5"></script>
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>

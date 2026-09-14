@@ -12,33 +12,38 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo-link" href="index.html">
-        <img src="assets/nimble-logo.png" width="293" height="59" alt="NiMBLE">
-        <span class="logo-wordmark">Nudging in Microbiology Laboratory Evaluation</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="header-bar">
+        <a class="logo-link" href="index.html#home">
+          <img src="assets/nimble-logo.png" width="293" height="59" alt="NiMBLE">
+          <span class="logo-wordmark">Nudging in Microbiology Laboratory Evaluation</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#home" aria-current="page">Home</a>
         <a href="#program">Program</a>
         <a href="#nudges">Types of nudges</a>
         <a href="#completed">Completed research</a>
+        <a href="#media">Media</a>
         <a href="#underway">Research underway</a>
         <a href="literature.html">Nudge catalog</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="hero-inner solo">
+    <section class="hero" id="home">
+      <div class="hero-inner">
         <div>
-          <h1>Nudging for better <em>antibiotic stewardship</em>.</h1>
+          <h1>Nudging for better <em>antimicrobial stewardship</em>.</h1>
           <p class="lede">The NiMBLE Research Program studies how laboratories can change culture and susceptibility reports
             so that the easier antibiotic to pick is also the more appropriate one</p>
           <div class="hero-actions">
@@ -46,6 +51,24 @@
             <a class="btn btn-ghost" href="literature.html">See the nudge catalog</a>
           </div>
         </div>
+        <ul class="hero-key">
+          <li>
+            <span class="nudge-glyph glyph-baseline" aria-hidden="true"><svg class="glyph"><use href="#icon-baseline"></use></svg></span>
+            <span>Baseline</span>
+          </li>
+          <li>
+            <span class="nudge-glyph glyph-selective" aria-hidden="true"><svg class="glyph"><use href="#icon-selective"></use></svg></span>
+            <span>Selective</span>
+          </li>
+          <li>
+            <span class="nudge-glyph glyph-framing" aria-hidden="true"><svg class="glyph"><use href="#icon-framing"></use></svg></span>
+            <span>Framing</span>
+          </li>
+          <li>
+            <span class="nudge-glyph glyph-eye" aria-hidden="true"><svg class="glyph"><use href="#icon-eye"></use></svg></span>
+            <span>Eye-level</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -54,6 +77,26 @@
         <div class="section-head">
           <h2>What is NiMBLE?</h2>
         </div>
+        <ol class="how-row">
+          <li>
+            <span class="how-num">01</span>
+            <span class="how-glyph" aria-hidden="true"><svg class="glyph"><use href="#icon-report"></use></svg></span>
+            <h3>The report</h3>
+            <p>Culture and susceptibility results already reach the bedside.</p>
+          </li>
+          <li>
+            <span class="how-num">02</span>
+            <span class="how-glyph" aria-hidden="true"><svg class="glyph"><use href="#icon-display"></use></svg></span>
+            <h3>The display</h3>
+            <p>What is shown, in what order, and with which comment.</p>
+          </li>
+          <li>
+            <span class="how-num">03</span>
+            <span class="how-glyph" aria-hidden="true"><svg class="glyph"><use href="#icon-choice"></use></svg></span>
+            <h3>The choice</h3>
+            <p>Prescribers keep autonomy. The easier pick is the better one.</p>
+          </li>
+        </ol>
         <div class="prose">
           <p>Nudging in Microbiology Laboratory Evaluation (NiMBLE) is a collaborative program based in Ontario
             including clinicians and researchers from University of Toronto, McMaster University and several hospitals
@@ -64,10 +107,6 @@
             susceptibility results. What they do not fully specify is which agents to show, in which clinical
             situations, and how to present them so that clinicians still have autonomy when a broader drug is needed.
           </p>
-          <p>A nudge is to change the way options are presented in order to alter behaviour without limiting autonomy. In
-            the laboratory that can mean suppressing a fluoroquinolone on a pan-susceptible urine isolate, putting
-            nitrofurantoin at the top of the list, or adding a sentence that the organism is more likely colonization
-            than infection.</p>
           <blockquote class="quote">
             “A nudge… is any aspect of the choice architecture that alters people’s behavior in a predictable way
             without forbidding any options or significantly changing their economic incentives.”
@@ -94,7 +133,7 @@
           <div class="nudge-tabs" role="tablist" aria-label="Nudge types">
             <button class="nudge-tab" id="tab-default" type="button" role="tab" aria-selected="true"
               aria-controls="slip" data-nudge="default">
-              <span class="swatch" aria-hidden="true"></span>
+              <span class="nudge-glyph glyph-baseline" aria-hidden="true"><svg class="glyph"><use href="#icon-baseline"></use></svg></span>
               <span>
                 <h3>Default / baseline</h3>
                 <p>Every tested agent, in a conventional order. No preference is encoded.</p>
@@ -102,7 +141,7 @@
             </button>
             <button class="nudge-tab" id="tab-selective" type="button" role="tab" aria-selected="false"
               aria-controls="slip" data-nudge="selective">
-              <span class="swatch" aria-hidden="true"></span>
+              <span class="nudge-glyph glyph-selective" aria-hidden="true"><svg class="glyph"><use href="#icon-selective"></use></svg></span>
               <span>
                 <h3>Selective / cascade</h3>
                 <p>Only preferred agents are shown. Broader drugs appear if the isolate is resistant to narrower ones,
@@ -111,7 +150,7 @@
             </button>
             <button class="nudge-tab" id="tab-framing" type="button" role="tab" aria-selected="false"
               aria-controls="slip" data-nudge="framing">
-              <span class="swatch" aria-hidden="true"></span>
+              <span class="nudge-glyph glyph-framing" aria-hidden="true"><svg class="glyph"><use href="#icon-framing"></use></svg></span>
               <span>
                 <h3>Framing / comments</h3>
                 <p>The full list remains, with a written comment that interprets the result or names preferred therapy.
@@ -120,7 +159,7 @@
             </button>
             <button class="nudge-tab" id="tab-eye" type="button" role="tab" aria-selected="false" aria-controls="slip"
               data-nudge="eye">
-              <span class="swatch" aria-hidden="true"></span>
+              <span class="nudge-glyph glyph-eye" aria-hidden="true"><svg class="glyph"><use href="#icon-eye"></use></svg></span>
               <span>
                 <h3>Eye-level</h3>
                 <p>Preferred agents stay on the report but move to the top of the list — first in the visual field.</p>
@@ -166,18 +205,57 @@
           <article class="study-card">
             <p class="year">2019 · Scoping review</p>
             <figure class="paper-figure">
-              <img src="assets/scoping-review.png" width="800" height="520"
+              <img src="assets/scoping-review.png" width="800" height="520" loading="lazy"
                 alt="First page of Langford et al., Nudging In MicroBiology Laboratory Evaluation (NIMBLE): A scoping review, Infection Control and Hospital Epidemiology, 2019.">
             </figure>
-            <a class="btn btn-teal" href="https://doi.org/10.1017/ice.2019.293">Open the paper</a>
+            <a class="btn btn-teal" href="https://doi.org/10.1017/ice.2019.293" target="_blank" rel="noopener noreferrer">Open the paper</a>
           </article>
           <article class="study-card">
             <p class="year">2026 · Systematic review and meta-analysis</p>
             <figure class="paper-figure">
-              <img src="assets/sr-visual-abstract.png" width="960" height="540"
+              <img src="assets/sr-visual-abstract.png" width="960" height="540" loading="lazy"
                 alt="Visual abstract for Langford et al., Nudging in MicroBiology Laboratory Evaluation (NiMBLE): a systematic review and meta-analysis, Clinical Microbiology and Infection, 2026.">
             </figure>
-            <a class="btn btn-teal" href="https://doi.org/10.1016/j.cmi.2026.04.008">Open the paper</a>
+            <a class="btn btn-teal" href="https://www.clinicalmicrobiologyandinfection.org/article/S1198-743X(26)00192-8/fulltext" target="_blank" rel="noopener noreferrer">Open the paper</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Media</h2>
+          <p class="section-intro">Podcast and press on NiMBLE and the laboratory as a stewardship partner.</p>
+        </div>
+        <div class="media-grid">
+          <article class="media-card">
+            <p class="year">2019 · ICHE Podcast</p>
+            <div class="media-title-row">
+              <span class="nudge-glyph glyph-podcast" aria-hidden="true"><svg class="glyph"><use href="#icon-podcast"></use></svg></span>
+              <h3>Episode 16, Volume 40 Issue 12, Part 1</h3>
+            </div>
+            <p>Bradley Langford on the NiMBLE scoping review: how susceptibility reports can nudge antimicrobial prescribing while preserving clinician autonomy.</p>
+            <div class="podcast-embed">
+              <iframe title="ICHE Podcast episode 16, Volume 40 Issue 12, Part 1"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-660720406/episode-16-volume-40-issue-12-part-1&amp;color=%2315687a&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false"
+                loading="lazy" allow="autoplay"></iframe>
+            </div>
+            <a class="btn btn-teal" href="https://soundcloud.com/user-660720406/episode-16-volume-40-issue-12-part-1" target="_blank" rel="noopener noreferrer">Listen on SoundCloud</a>
+          </article>
+          <article class="media-card">
+            <p class="year">2016 · The Pathologist</p>
+            <div class="media-title-row">
+              <span class="nudge-glyph glyph-article" aria-hidden="true"><svg class="glyph"><use href="#icon-article"></use></svg></span>
+              <h3>A Nudge in the Right Direction</h3>
+            </div>
+            <div class="magazine-mark" aria-hidden="true">
+              <span class="magazine-kicker">The Pathologist</span>
+              <span class="magazine-issue">October 2016</span>
+              <span class="magazine-headline">A nudge in the right direction</span>
+            </div>
+            <p>Brad Langford and Larissa Matukas on selective ciprofloxacin reporting, collaboration between laboratory and stewardship teams, and why a nudge still leaves the choice with the prescriber.</p>
+            <a class="btn btn-teal" href="https://thepathologist.com/issues/2016/articles/oct/a-nudge-in-the-right-direction/" target="_blank" rel="noopener noreferrer">Read the article</a>
           </article>
         </div>
       </div>
@@ -193,12 +271,14 @@
         </div>
         <div class="pipeline">
           <article>
+            <span class="nudge-glyph glyph-selective" aria-hidden="true"><svg class="glyph"><use href="#icon-survey"></use></svg></span>
             <span class="status">Survey closed · analysis ongoing</span>
             <h3>Vignette survey</h3>
             <p>Prescribers are shown the same case, for example, initiation of therapy for <em>E. coli</em> in urine, with
               default, selective, framing, or eye-level reports. This randomized vignette study will compare different types of nudges in different contexts, including initiation, escalation, de-escalation of antibiotic therapy.</p>
           </article>
           <article>
+            <span class="nudge-glyph glyph-framing" aria-hidden="true"><svg class="glyph"><use href="#icon-interview"></use></svg></span>
             <span class="status">Qualitative study - closed - analysis ongoing</span>
             <h3>Clinician perspectives</h3>
             <p>Focus-group interviews ask how clinicians notice, interpret, and act on a microbiology nudge. The aim is
@@ -206,6 +286,7 @@
               people will trust and use, including when a suppressed agent is the right one.</p>
           </article>
           <article>
+            <span class="nudge-glyph glyph-eye" aria-hidden="true"><svg class="glyph"><use href="#icon-trial"></use></svg></span>
             <span class="status">Next · prospective evaluation</span>
             <h3>Prospective trials</h3>
             <p>Both NiMBLE reviews identify the same limitations: most evidence is uncontrolled before-and-after work. Community
@@ -245,9 +326,10 @@
     <div class="wrap footer-inner">
       <p>NiMBLE · Nudging in Microbiology Laboratory Evaluation. Supported by the AFP Innovation Fund, with AMMI CRN and
         TARRN.</p>
+      <p><a href="contact.html">Contact</a> · <a href="literature.html">Nudge catalog</a></p>
     </div>
   </footer>
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 
 </html>

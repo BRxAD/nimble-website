@@ -5,23 +5,13 @@
     <circle cx="24" cy="24" r="15.5" stroke="currentColor" stroke-width="2.25"/>
     <path d="M13.4 13.4 L34.6 34.6" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
   </symbol>
-  <symbol id="icon-hand-right" viewBox="0 0 48 48">
-    <g fill="currentColor" transform="translate(0.9 0) scale(0.1034)">
-      <path d="M448 128c0-17.67-14.33-32-32-32s-32 14.33-32 32v48h-16V80c0-26.51-21.49-48-48-48s-48 21.49-48 48v96h-16V48c0-26.51-21.49-48-48-48S160 21.49 160 48v176.62L84.69 162.34c-15.12-16.51-39.84-19.19-58.36-6.24C7.81 170.27-1.17 197.3 6.18 221.01l56.16 180.5C74.99 435.5 108.61 464 147.34 464H352c53.02 0 96-42.98 96-96V128z"/>
-    </g>
-  </symbol>
-  <symbol id="icon-selective" viewBox="0 0 48 48">
-    <use href="#icon-hand-right"/>
-  </symbol>
   <symbol id="icon-framing" viewBox="0 0 48 48" fill="none">
     <path d="M10 12.5h28c2.2 0 4 1.8 4 4v14c0 2.2-1.8 4-4 4H22l-8.5 7v-7H10c-2.2 0-4-1.8-4-4v-14c0-2.2 1.8-4 4-4z" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round"/>
     <path d="M16 20.5h16M16 26.5h10" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
   </symbol>
   <symbol id="icon-combination" viewBox="0 0 48 48" fill="none">
     <path d="M8.5 11h31c2.2 0 4 1.8 4 4v16.5c0 2.2-1.8 4-4 4H22.5l-8 6.5v-6.5H8.5c-2.2 0-4-1.8-4-4V15c0-2.2 1.8-4 4-4z" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round"/>
-    <g transform="translate(11.2 13.4) scale(0.52)">
-      <use href="#icon-hand-right"/>
-    </g>
+    <image href="assets/pointing-hand.png" x="13" y="16.4" width="21" height="12.6" preserveAspectRatio="xMidYMid meet"/>
   </symbol>
   <symbol id="icon-eye" viewBox="0 0 48 48" fill="none">
     <path d="M6.5 24c4.2-9.2 11.2-14 17.5-14S37.3 14.8 41.5 24c-4.2 9.2-11.2 14-17.5 14S10.7 33.2 6.5 24z" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round"/>
@@ -217,10 +207,12 @@
         ? `<a href="https://doi.org/${study.doi}">doi:${study.doi}</a>`
         : "No DOI listed";
       const authors = study.authors.replace(/\.$/, "");
-      const icon = TYPE_ICON[study.type] || "icon-baseline";
+      const mark = study.type === "selective"
+        ? `<span class="glyph glyph-hand"></span>`
+        : `<svg class="glyph"><use href="#${TYPE_ICON[study.type] || "icon-baseline"}"></use></svg>`;
       article.innerHTML = `
         <div class="type-mark type-${study.type}" aria-hidden="true">
-          <svg class="glyph"><use href="#${icon}"></use></svg>
+          ${mark}
         </div>
         <div class="lit-body">
           <header>

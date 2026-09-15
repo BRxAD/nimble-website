@@ -555,6 +555,11 @@ a:hover {
   height: 1.15rem;
 }
 
+.legend-btn .glyph-hand {
+  width: 1.28rem;
+  height: 0.78rem;
+}
+
 .legend-btn.is-active {
   border-color: var(--teal);
   box-shadow: inset 3px 0 0 var(--cyan);
@@ -798,6 +803,20 @@ a:hover {
   display: block;
   width: 1.45rem;
   height: 1.45rem;
+}
+
+.glyph-hand {
+  width: 1.62rem;
+  height: 0.98rem;
+  background-color: currentColor;
+  -webkit-mask-image: url("assets/pointing-hand.png");
+  mask-image: url("assets/pointing-hand.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .glyph-baseline {
@@ -1168,6 +1187,11 @@ select {
 .type-mark .glyph {
   width: 1.7rem;
   height: 1.7rem;
+}
+
+.type-mark .glyph-hand {
+  width: 1.85rem;
+  height: 1.12rem;
 }
 
 .type-mark.type-selective {

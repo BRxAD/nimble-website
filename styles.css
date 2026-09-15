@@ -448,6 +448,12 @@ a:hover {
   line-height: 1.3;
 }
 
+.media-byline {
+  margin: 0 0 0.4rem;
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
 .media-card p {
   margin: 0 0 1rem;
   color: var(--muted);
@@ -506,6 +512,12 @@ a:hover {
   font-size: 1.55rem;
   font-style: italic;
   line-height: 1.15;
+}
+
+.magazine-authors {
+  margin-top: 0.5rem;
+  color: rgba(238, 243, 241, 0.78);
+  font-size: 0.85rem;
 }
 
 .type-legend {

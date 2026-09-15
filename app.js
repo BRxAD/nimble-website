@@ -6,9 +6,7 @@
     <path d="M13.4 13.4 L34.6 34.6" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
   </symbol>
   <symbol id="icon-hand-right" viewBox="0 0 48 48">
-    <g fill="currentColor" fill-rule="evenodd" transform="translate(24 24) rotate(90) scale(0.152) translate(-128 -128)">
-      <path d="M196,88a28.1,28.1,0,0,0-12,2.71,28,28,0,1,0-52,0A28,28,0,1,0,80,114.71V76a28,28,0,0,0-56,0v80a80,80,0,0,0,80,80h40a80,80,0,0,0,80-80V116A28,28,0,0,0,196,88Zm12,68a64.1,64.1,0,0,1-64,64H104a64.1,64.1,0,0,1-64-64V76a12,12,0,0,1,24,0v36a8,8,0,0,0,16,0V88a12,12,0,0,1,24,0v24a8,8,0,0,0,16,0V100a12,12,0,0,1,24,0v28a8,8,0,0,0,16,0V116a12,12,0,0,1,24,0Z"/>
-    </g>
+    <path fill="currentColor" d="M7.6 28.2c0-2.5 2-4.6 4.6-4.6h2.1V12c0-2.6 2.1-4.8 4.8-4.8s4.8 2.2 4.8 4.8v6.6h1.3V20H41.4c2.3 0 4.2 1.9 4.2 4.2s-1.9 4.2-4.2 4.2H24.4v2.2h-1.3v5.1c0 3.4-2.8 6.2-6.2 6.2h-5.6c-4.1 0-7.4-3.3-7.4-7.4v-5.1c0-.4 0-.8.1-1.2z"/>
   </symbol>
   <symbol id="icon-selective" viewBox="0 0 48 48">
     <use href="#icon-hand-right"/>

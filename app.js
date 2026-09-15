@@ -6,7 +6,9 @@
     <path d="M13.4 13.4 L34.6 34.6" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
   </symbol>
   <symbol id="icon-hand-right" viewBox="0 0 48 48">
-    <path fill="currentColor" d="M7.6 28.2c0-2.5 2-4.6 4.6-4.6h2.1V12c0-2.6 2.1-4.8 4.8-4.8s4.8 2.2 4.8 4.8v6.6h1.3V20H41.4c2.3 0 4.2 1.9 4.2 4.2s-1.9 4.2-4.2 4.2H24.4v2.2h-1.3v5.1c0 3.4-2.8 6.2-6.2 6.2h-5.6c-4.1 0-7.4-3.3-7.4-7.4v-5.1c0-.4 0-.8.1-1.2z"/>
+    <g fill="currentColor" transform="translate(0.9 0) scale(0.1034)">
+      <path d="M448 128c0-17.67-14.33-32-32-32s-32 14.33-32 32v48h-16V80c0-26.51-21.49-48-48-48s-48 21.49-48 48v96h-16V48c0-26.51-21.49-48-48-48S160 21.49 160 48v176.62L84.69 162.34c-15.12-16.51-39.84-19.19-58.36-6.24C7.81 170.27-1.17 197.3 6.18 221.01l56.16 180.5C74.99 435.5 108.61 464 147.34 464H352c53.02 0 96-42.98 96-96V128z"/>
+    </g>
   </symbol>
   <symbol id="icon-selective" viewBox="0 0 48 48">
     <use href="#icon-hand-right"/>
